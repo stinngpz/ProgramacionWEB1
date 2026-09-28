@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<ahtml lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afilacion club de puntos</title>
+</head>
+<body>
+    <header class="encabezado-tienda">
+        <div class="logo-area">
+            <h1>Supermercado el ahorro</h1>
+            <p> El verdadero ahorro </p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">inicio</a>
+            </li>
+            <li>
+                <a href="cv.html">Desarrolo web</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="contenedor-formulario">
+        <h2>Formulario de afiliacion de clientes nuevos</h2>
+        <form action="afiliados.php" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">ingrese su nombre completo</label>
+                    <input type="text" name="nombre" id="nombre"  required placeholder="Ingrese su nombre y apellido" minlength="10" maxlength="100">
+                </div>
+                <div>
+                    <label for="DNI">ingrese su DNI</label>
+                    <input type="text" name="DNI" id="DNI"  required placeholder="Ingrese su numero de identidad" minlength="13" maxlength="13" pattern="[0-9]{4}-[0-9]{4}-[0-9]{5}">
+                </div>
+                <div>
+                    <label for="telefono">ingrese su numero de telefono</label>
+                    <input type="tel" name="telefono" id="telefono"  required placeholder="Ingrese su numero de telefono" minlength="11" maxlength="11" pattern="[0-9]{11}">
+                </div>
+                <div>
+                    <label for="fecha_nacimiento">ingrese su fecha de nacimiento</label>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" min="1945-01-01" max="2008-01-01" required>
+                </div>
+                <div>
+                    <label for="Direccion">ingrese su direccion</label>
+                    <input type="text" name="Direccion" id="Direccion"  required placeholder="Ingrese su direccion">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informacion de compra</legend>
+                <div>
+                    <label>Sucursal que mas visita</label>
+                    <select id="Seleccione la sucursal favorita" name="Sucursal">
+                        <option value="Sucursal 1" selected>Blv Morazan</option>
+                        <option value="Sucursal 2">City Mall</option>
+                        <option value="Sucursal 3">Blv Suyapa</option>
+                    </select>
+                </div>
+            </fieldset>
+
+        </form>
+
+        
+    </main>
+</body>
+</html>
